@@ -1,0 +1,40 @@
+@ProductApi_HostAddress = https://localhost:7165
+
+GET {{ProductApi_HostAddress}}/api/product
+
+###
+
+POST {{ProductApi_HostAddress}}/api/product
+Content-Type: application/json
+
+{
+  "productId": 0,
+  "productName": "IPhone",
+  "productDescription": "IPhone 12",
+  "productPrice": 1400,
+  "productStock": 10
+}
+
+###
+
+PUT {{ProductApi_HostAddress}}/api/product
+Content-Type: application/json
+
+{
+  "productId": 1,
+  "productName": "IPhone",
+  "productDescription": "IPhone 13",
+  "productPrice": 1450,
+  "productStock": 30
+}
+
+###
+
+@id=0
+DELETE {{ProductApi_HostAddress}}/api/product/1
+
+###
+
+GET {{ProductApi_HostAddress}}/api/product/1
+
+###
